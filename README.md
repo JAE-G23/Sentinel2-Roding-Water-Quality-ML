@@ -177,8 +177,6 @@ The project is contained in a single Google Colab notebook with 12 cells:
 | 11 | Seasonal comparison (summer vs winter features) | **Week 5** |
 | 12 | Environmental cost assessment | — |
 
-**Minimal change principle:** Each cell clearly comments which Week code it adapts and what the minimal changes are. For example, Cell 3 changes only three lines from the Week 3 query function (collection name, product type, bounding polygon). Cell 7 replaces `train_test_split` with `LeaveOneOut` from the same sklearn import — everything else is identical to Week 5.
-
 ---
 
 ## Results
