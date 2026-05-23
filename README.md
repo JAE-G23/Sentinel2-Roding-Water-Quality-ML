@@ -185,28 +185,46 @@ The project is contained in a single Google Colab notebook with 12 cells:
 
 ### Model Performance Summary (LOO-CV)
 
-| Target | Model | n | R² | RMSE |
-|--------|-------|---|----|------|
-| EC (µS/cm) | Ridge Regression | 38 | TBC | TBC |
-| EC (µS/cm) | Random Forest | 38 | TBC | TBC |
-| Na (ppm) | Ridge Regression | 15 | TBC | TBC |
-| Na (ppm) | Random Forest | 15 | TBC | TBC |
-| pH | Random Forest | 38 | TBC | TBC |
+| Target | Model | n | R² | RMSE | MAE |
+|--------|-------|---|----|------|------|
+| EC (µS/cm) | Ridge Regression | 31 | 0.255 | 128.5 | 107.7 |
+| EC (µS/cm) | Random Forest | 31 | 0.170 | 135.6 | 111.9 |
+| Na (ppm) | Ridge Regression | 11 | 0.009 | 14.2 | 11.5 |
+| Na (ppm) | Random Forest | 11 | -0.048 | 14.6 | 12.0 |
+| pH | Random Forest | 31 | -0.116 | 0.25 | 0.19 |
+
+The strongest predictive performance was obtained for EC, where both Ridge Regression and Random Forest captured part of the downstream hydrochemical variability associated with urbanisation and Thames influence. Ridge Regression slightly outperformed Random Forest, suggesting the relationship between the selected Sentinel-2 features and EC is relatively low-dimensional and approximately linear. Na concentrations showed weak predictive performance, likely reflecting the small ICP-OES sample size (n=11) and the stronger influence of hydrological mixing processes. pH was effectively unpredictable from EO features, supporting the interpretation that carbonate buffering and geological controls dominate over land-cover effects.
 
 ### Feature Ablation (EC)
 
+| Feature set | R² | RMSE | MAE |
+|-------------|-----|------|
+| Spatial only (distance rank) | 0.191 | 133.9 | 112.1 |
+| EO only (NDVI, NDWI, NDBI) | 0.015 | 147.7 | 122.5 |
+| Combined | 0.170 | 135.6 | 111.9 |
+
+Feature ablation demonstrates that spatial position along the river explains substantially more EC variability than Sentinel-2 EO features alone. The EO-only model produced very weak predictive skill (R² = 0.015), indicating that catchment spectral characteristics contribute only limited additional explanatory power beyond the longitudinal hydrochemical gradient. This result is scientifically important because it highlights both the capability and limitations of Sentinel-2 for narrow urban river systems.
+
+### Seasonal Comparison (EC)
+
 | Feature set | R² | RMSE |
 |-------------|-----|------|
-| Spatial only (distance rank) | TBC | TBC |
-| EO only (NDVI, NDWI, NDBI) | TBC | TBC |
-| Combined | TBC | TBC |
+| Summer only | 0.057 | 144.5 µS/cm |
+| Winter only | -0.113 | 157.1 µS/cm |
+| Combined | 0.170 | 135.6 µS/cm |
 
-### Out-of-Domain Evaluation (Estuarine sites)
+Summer Sentinel-2 features produced slightly stronger predictive performance than winter imagery, consistent with reduced dilution during low-flow conditions. Winter performance weakened substantially, suggesting that high-flow hydrological conditions reduce the relationship between surface land cover and observed ionic concentration.
+
+### Out-of-Domain Evaluation (Estuarine Sites)
 
 | Domain | R² | RMSE |
 |--------|-----|------|
-| Freshwater (in-domain) | TBC | TBC |
-| Estuarine (out-of-domain) | TBC | TBC |
+| Freshwater (in-domain) | 0.170 | 136 µS/cm |
+| Estuarine (out-of-domain) | -9.210 | 2641 µS/cm |
+
+The freshwater-trained Random Forest model failed completely when applied to estuarine sites influenced by Thames tidal backwash. This failure is scientifically meaningful rather than problematic, as it demonstrates that the model captures land-use-driven freshwater hydrochemistry but cannot resolve tidal salinity intrusion processes that are not directly observable through Sentinel-2 surface reflectance data.
+
+Overall, the project demonstrates that Sentinel-2-derived environmental features can partially explain urban freshwater hydrochemistry, but also highlights important physical limitations associated with narrow river geometry, hydrological mixing, and estuarine tidal influence.
 
 ### Key Figures Produced
 
