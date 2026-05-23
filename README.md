@@ -181,8 +181,6 @@ The project is contained in a single Google Colab notebook with 12 cells:
 
 ## Results
 
-*(To be populated after full notebook run)*
-
 ### Model Performance Summary (LOO-CV)
 
 | Target | Model | n | R² | RMSE | MAE |
