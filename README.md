@@ -150,7 +150,7 @@ SHapley Additive exPlanations applied to the fitted Random Forest models to iden
 
 **Leave-One-Out Cross-Validation (LOO-CV)** is used instead of a fixed train/test split. With only 38 sites, a held-out test set would be unrepresentatively small. LOO-CV is the standard approach for small geochemical datasets: each site takes a turn as the single test point, with all remaining sites used for training. This produces n unbiased predictions which are then compared to observed values.
 
-**Out-of-domain evaluation:** The freshwater-trained EC model is additionally applied to the excluded estuarine sites. The model is expected to underpredict dramatically, as tidal salinity intrusion from the Thames is a process invisible to Sentinel-2 catchment features. This failure is scientifically meaningful — it confirms the model is capturing land-use driven chemistry rather than confounding position-along-river effects.
+**Out-of-domain evaluation:** The freshwater-trained EC model is additionally applied to the excluded estuarine sites. The model is expected to underpredict dramatically, as tidal salinity intrusion from the Thames is a process invisible to Sentinel-2 catchment features. This failure is scientifically meaningful rather than problematic, as it demonstrates that the freshwater-trained model captures land-use-driven hydrochemical variability but cannot resolve estuarine tidal mixing processes invisible to Sentinel-2 surface reflectance data.
 
 **Feature ablation:** An additional comparison runs three separate EC models — using spatial position only, EO features only, and both combined — to isolate how much the satellite data contributes beyond a simple upstream-downstream proxy.
 
@@ -309,7 +309,7 @@ river-roding-water-quality-AI4EO/
 ## Limitations
 
 - **Small sample size:** n=38 field sites and n=15 ICP-OES samples constrains model complexity and statistical power. LOO-CV mitigates this but does not eliminate it.
-- **Single-pixel sampling:** Sentinel-2 features are extracted at the exact GPS coordinate of each sample point rather than aggregated over an upstream sub-catchment. Sub-catchment aggregation would be a stronger methodological choice but requires DEM-based hydrological delineation.
+- **Local buffer aggregation:** Sentinel-2 features are extracted from small buffers surrounding each sampling location rather than from hydrologically delineated upstream sub-catchments. While this captures the immediate urban land-cover environment, it does not fully resolve upstream transport pathways.
 - **Narrow river channel:** The Roding is narrower than a single Sentinel-2 pixel at most sampling locations. Spectral values at the sampling points reflect bankside land cover rather than the water surface itself — this is a deliberate methodological choice, not a limitation.
 - **Two scenes only:** Imagery for one summer and one winter scene is used. A multi-year or multi-date composite would produce more robust spectral features.
 - **Estuarine sites:** The Thames tidal backwash signal cannot be captured by any land-cover satellite feature. This is clearly demonstrated in Cell 9 and is a finding rather than a flaw.
