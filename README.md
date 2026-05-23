@@ -351,6 +351,6 @@ Project Link: https://github.com/YOUR_USERNAME/YOUR_REPO
 
 ## Acknowledgements
 
-This project was completed as part of GEOL0069 at University College London, taught by Dr Michel Tsamados and Weibin Chen. The field data underpinning this project was collected during GEOL0024 Environmental Mapping under Prof. Alex Lipp. The notebook adapts code and concepts from the GEOL0069 weekly materials, applied to a new research context.
+This project was completed as part of GEOL0069 at University College London, taught by Dr Michel Tsamados and Weibin Chen. The field data underpinning this project was collected during GEOL0024 Environmental Mapping under Dr. Alex Lipp. The notebook adapts code and concepts from the GEOL0069 weekly materials, applied to a new research context.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
