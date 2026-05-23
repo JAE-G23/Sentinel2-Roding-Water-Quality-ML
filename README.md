@@ -196,7 +196,7 @@ The strongest predictive performance was obtained for EC, where both Ridge Regre
 ### Feature Ablation (EC)
 
 | Feature set | R² | RMSE | MAE |
-|-------------|-----|------|
+|-------------|-----|------|------|
 | Spatial only (distance rank) | 0.191 | 133.9 | 112.1 |
 | EO only (NDVI, NDWI, NDBI) | 0.015 | 147.7 | 122.5 |
 | Combined | 0.170 | 135.6 | 111.9 |
