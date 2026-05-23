@@ -162,7 +162,7 @@ SHapley Additive exPlanations applied to the fitted Random Forest models to iden
 
 The project is contained in a single Google Colab notebook with 12 cells:
 
-| Cell | Description | Week code adapted |
+| Cell | Description | Adapted from |
 |------|-------------|------------------|
 | 1 | Setup, Drive mount, EnvironmentalCostTracker class | — |
 | 2 | Load field data CSV, estuarine split, study area map | — |
