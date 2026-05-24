@@ -195,7 +195,7 @@ The project is contained in a single Google Colab notebook with 12 cells:
 
 ---
 
-## 📊Results
+## 📅Results
 
 ### Model Performance Summary (LOO-CV)
 
@@ -240,7 +240,7 @@ The freshwater-trained Random Forest model failed completely when applied to est
 
 Overall, the project demonstrates that Sentinel-2-derived environmental features can partially explain urban freshwater hydrochemistry, but also highlights important physical limitations associated with narrow river geometry, hydrological mixing, and estuarine tidal influence.
 
-## Key Figures
+## 📊Key Figures
 
 ### Study Area — Sampling Sites
 <p align="center">
