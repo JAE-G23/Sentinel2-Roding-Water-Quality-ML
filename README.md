@@ -257,7 +257,7 @@ Computational carbon was tracked throughout the notebook using a custom `Environ
 | Phase | Duration | Energy (Wh) | Carbon (g CO₂) |
 |-------|:--------:|:-----------:|:--------------:|
 | Data Loading & Study Area | 0.0 min | 0.0 | 0.0 |
-| Sentinel-2 Query & Download (Summer) | 52.0 min | 65.2 | 32.6 |
+| Sentinel-2 Query & Download (Summer) | 0.7 min | 0.9 | 0.4 |
 | Sentinel-2 Query & Download (Winter) | 0.4 min | 0.5 | 0.3 |
 | Band Loading & RGB Preview | 1.3 min | 1.8 | 0.9 |
 | Spectral Index Calculation | 0.3 min | 0.4 | 0.2 |
