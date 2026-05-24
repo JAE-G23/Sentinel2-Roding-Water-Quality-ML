@@ -294,6 +294,8 @@ Computational carbon was tracked throughout the notebook using a custom `Environ
 **Fieldwork baseline:** Two sampling campaigns along the Roding corridor (Loughton to Barking, ~60 km round trip × 2 seasons × 0.21 kg CO₂/km by car) = approximately 25 kg CO₂. The satellite ML pipeline produced only 3.0 g CO₂ — a 99.9% reduction compared to the estimated 25 kg CO₂ fieldwork baseline.
 
 ![Environmental Cost](figures/environmental_cost.png)
+</p>
+<p align="center"><em>Figure 8. Computational carbon footprint of the AI4EO River Roding project. Left: carbon emissions per pipeline phase, showing Band Loading and data download as the dominant costs. Right: log-scale comparison between the total ML pipeline footprint (3 g CO₂) and the estimated traditional fieldwork baseline (~25,000 g CO₂ from vehicle travel across two sampling campaigns). The satellite ML approach achieves a carbon saving of >99%.</em></p>
 
 ---
 
