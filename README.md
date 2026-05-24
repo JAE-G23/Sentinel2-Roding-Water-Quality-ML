@@ -268,6 +268,7 @@ Overall, the project demonstrates that Sentinel-2-derived environmental features
 <img src="figures/kmeans_landcover.png" width="800"/>
 </p>
 <p align="center"><em>Figure 7. K-Means unsupervised clustering (4 clusters) applied to Sentinel-2 summer bands (B04, B03, B02, B08) over the Roding catchment, shown alongside the RGB reference image. The algorithm separates the scene into distinct land cover types without any labelled training data: red/brown tones in the north correspond to suburban and vegetated area, while green dominates the densely urbanised and impervious surfaces of inner East London in the south. The Thames is visible as a dark green winding feature through the lower portion of the scene. The spatial pattern aligns visually with the RGB composite, confirming the clusters capture meaningful land cover variation rather than noise.</em></p>
+
 ---
 
 ## 🌐Environmental Impact
