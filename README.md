@@ -246,7 +246,7 @@ Overall, the project demonstrates that Sentinel-2-derived environmental features
 <p align="center">
 <img src="figures/sampling_sites_map.png" width="600"/>
 </p>
-<p align="center"><em>Figure 3. River Roding sampling sites across the London reach. Blue circles indicate freshwater sites used for model training (n=31); red triangles indicate estuarine sites excluded from training and reserved as an out-of-domain evaluation set (n=7).</em></p>
+<p align="center"><em>Figure 3. River Roding sampling sites across the London reach. Blue circles indicate freshwater sites used for model training; red triangles indicate estuarine sites excluded from training and reserved as an out-of-domain evaluation set.</em></p>
 
 ### Sentinel-2 Spectral Indices (Summer & Winter)
 <p align="center">
