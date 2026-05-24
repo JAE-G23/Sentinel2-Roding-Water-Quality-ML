@@ -137,7 +137,7 @@ The final feature set used in regression (`FEATURE_COLS`) comprises 7 physically
 ### Machine Learning Approaches
 
 #### Supervised Regression — Random Forest (main model)
-Random Forest Regressor with 200 estimators, adapted from the Week 5 regression framework. Chosen for its ability to handle non-linear relationships between spectral features and water chemistry, and for providing feature importance scores used in SHAP analysis.
+Random Forest Regressor with 200 estimators. Chosen for its ability to handle non-linear relationships between spectral features and water chemistry, and for providing feature importance scores used in SHAP analysis.
 
 Applied to three targets:
 - **EC** (n=38 freshwater sites) — expected to be predictable from impervious surface features
