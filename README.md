@@ -284,7 +284,7 @@ git clone https://github.com/JAE-G23/Sentinel2-Roding-Water-Quality-ML.git
 The notebook installs all required packages automatically at Cell 1:
 
 ```python
-!pip install pysheds contextily codecarbon rasterio shap --quiet
+!pip install pysheds contextily codecarbon rasterio shap
 ```
 
 Standard packages (NumPy, pandas, scikit-learn, matplotlib, seaborn) are pre-installed in Colab.
