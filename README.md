@@ -7,7 +7,7 @@
 **Author:** James Ge  
 **Institution:** University College London
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/River_Roding_AI4EO.ipynb)
+**[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/River_Roding_AI4EO.ipynb)**
 
 ---
 
