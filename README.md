@@ -4,7 +4,7 @@
 <h3 align="center">A Machine Learning Approach Applied to the River Roding, East London</h3>
 
 <p align="center">
-  <img src="figure_for_presentation/roding-ilford-scaled.jpeg">
+  <img src="figure_for_presentation/roding-ilford-scaled.jpeg" width="800">
 </p>
 
 <p align="center">
