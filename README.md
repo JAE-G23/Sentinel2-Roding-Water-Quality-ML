@@ -278,7 +278,7 @@ All code runs in **Google Colab**. Click the badge at the top to open the notebo
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git clone https://github.com/JAE-G23/Sentinel2-Roding-Water-Quality-ML.git
 ```
 
 The notebook installs all required packages automatically at Cell 1:
@@ -362,7 +362,7 @@ Email: james.ge.23@ucl.ac.uk
 Institution: University College London  
 Course: GEOL0069 – AI for Earth Observation
 
-Project Link: https://github.com/YOUR_USERNAME/YOUR_REPO
+Project Link: https://github.com/JAE-G23/Sentinel2-Roding-Water-Quality-ML
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
