@@ -164,6 +164,9 @@ SHapley Additive exPlanations applied to the fitted Random Forest models to iden
 
 **Seasonal comparison:** EC models are fitted separately on summer-only, winter-only, and combined feature sets. If summer features outperform winter, this confirms the EC dilution signal in water quality field investigation (lower flow → more concentrated ionic load → stronger land-cover signal).
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ---
 
 ## 📝Notebook Structure
@@ -338,6 +341,9 @@ Run cells sequentially from Cell 1. Cell 3 will prompt for Copernicus credential
 - **Narrow river channel:** The Roding is narrower than a single Sentinel-2 pixel at most sampling locations. Spectral values at the sampling points reflect bankside land cover rather than the water surface itself — this is a deliberate methodological choice, not a limitation.
 - **Two scenes only:** Imagery for one summer and one winter scene is used. A multi-year or multi-date composite would produce more robust spectral features.
 - **Estuarine sites:** The Thames tidal backwash signal cannot be captured by any land-cover satellite feature. This is clearly demonstrated in Cell 9 and is a finding rather than a flaw.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
