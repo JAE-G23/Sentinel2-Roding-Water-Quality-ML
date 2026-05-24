@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <em>Figure 1. The River Roding at Ilford, East London — representative of the urban river corridor investigated in this project.
+  <em>Figure 1. The River Roding at Ilford, East London — representative of the urban river corridor investigated in this project.</em>
 </p>
 
 **Course:** GEOL0069 – Artificial Intelligence for Earth Observation  
@@ -267,10 +267,10 @@ Computational carbon was tracked throughout the notebook using a custom `Environ
 | Estuarine Out-of-Domain Evaluation | 0.0 min | 0.0 | 0.0 |
 | K-Means Unsupervised Clustering | 0.6 min | 0.8 | 0.4 |
 | Seasonal Comparison | 0.4 min | 0.5 | 0.3 |
-| **Total ML pipeline** | **55.4 min** | **30** | **15** |
+| **Total ML pipeline** | **~0.3 hours** | **46** | **23** |
 | **Traditional fieldwork baseline** | — | — | **~25,000** |
 
-**Fieldwork baseline:** Two sampling campaigns along the Roding corridor (Loughton to Barking, ~60 km round trip × 2 seasons × 0.21 kg CO₂/km by car) = approximately 25 kg CO₂. The satellite ML pipeline produced only 34.9 g CO₂ — a 99.9% reduction compared to the estimated 25 kg CO₂ fieldwork baseline.
+**Fieldwork baseline:** Two sampling campaigns along the Roding corridor (Loughton to Barking, ~60 km round trip × 2 seasons × 0.21 kg CO₂/km by car) = approximately 25 kg CO₂. The satellite ML pipeline produced only 23.0 g CO₂ — a 99.9% reduction compared to the estimated 25 kg CO₂ fieldwork baseline.
 
 ---
 
@@ -336,7 +336,7 @@ river-roding-water-quality-AI4EO/
 ## Limitations
 
 - **Small sample size:** n=38 field sites and n=15 ICP-OES samples constrains model complexity and statistical power. LOO-CV mitigates this but does not eliminate it.
-- **Local buffer aggregation:** Sentinel-2 features are extracted from small buffers surrounding each sampling location rather than from hydrologically delineated upstream sub-catchments. While this captures the immediate urban land-cover environment, it does not fully resolve upstream transport pathways.
+- **Point-based spectral sampling:** Sentinel-2 features are extracted at the GPS coordinate of each sampling location rather than from hydrologically delineated upstream sub-catchments or spatial buffers. This captures the immediate bankside spectral environment but does not fully resolve upstream transport pathways.
 - **Narrow river channel:** The Roding is narrower than a single Sentinel-2 pixel at most sampling locations. Spectral values at the sampling points reflect bankside land cover rather than the water surface itself — this is a deliberate methodological choice, not a limitation.
 - **Two scenes only:** Imagery for one summer and one winter scene is used. A multi-year or multi-date composite would produce more robust spectral features.
 - **Estuarine sites:** The Thames tidal backwash signal cannot be captured by any land-cover satellite feature. This is clearly demonstrated in Cell 9 and is a finding rather than a flaw.
