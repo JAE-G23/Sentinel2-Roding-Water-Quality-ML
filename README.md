@@ -15,7 +15,6 @@
 **Author:** James Ge  
 **Institution:** University College London
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAE-G23/Sentinel2-Roding-Water-Quality-ML/blob/main/River_Roding_AI4EO.ipynb)
 
 ---
 
@@ -49,9 +48,9 @@
 
 ---
 
-## Project Overview
+## 🏠Project Overview
 
-This project investigates whether Sentinel-2 Earth Observation data and machine learning can explain spatial variability in water quality along the River Roding, East London. It builds directly on previous field-based hydrochemical mapping carried out as part of the GEOL0024 Environmental Mapping module, during which in-situ measurements of pH, electrical conductivity (EC), and nitrate concentration, alongside ICP-OES elemental analysis of major ions and trace elements at 15 sites, were collected across two seasons.
+This project investigates whether Sentinel-2 Earth Observation data and machine learning can explain spatial variability in water quality along the River Roding, East London. It builds directly on previous field-based hydrochemical mapping carried out as part of the GEOL0024 Environmental Mapping module, during which in-situ measurements of pH, electrical conductivity (EC), and nitrate concentration, alongside ICP-OES elemental analysis of major ions and trace elements at 15 sites. These were collected across two seasons.
 
 The River Roding is too narrow (~10–30m) to be directly imaged at Sentinel-2's 10m resolution. Rather than attempting to image the channel itself, this project extracts spectral and land-cover characteristics from the **surrounding catchment environment** of each sampling location and uses these within a machine learning regression framework to predict water quality parameters — principally EC and sodium concentration (Na).
 
@@ -59,15 +58,15 @@ A key methodological decision separates sites strongly influenced by Thames estu
 
 ---
 
-## Background and Motivation
+## 💡Background and Motivation
 
 This project is inspired by my water quality mapping study of the River Roding conducted as part of the Environmental Mapping module under Dr. Alex Lipp, during which I mapped the London reach of the river through in-situ measurements of pH, electrical conductivity, and nitrate, alongside laboratory ICP-OES analysis of major ion and trace element concentrations at 15 sites. That fieldwork deepened my understanding of the controls on river chemistry, with anthropogenic land use emerging as one of the most significant drivers.
 
-For this AI4EO project, I explored how machine learning applied to Sentinel-2 satellite imagery could extend those findings beyond what fieldwork alone can reveal. Earth observation is particularly powerful for characterising land use and land cover change, and since the transition from suburban to urban and industrial landscapes strongly influences ionic load and nutrient concentrations in rivers, satellite catchment data is scientifically valuable. By combining my in-situ measurements as ground truth with machine learning on Sentinel-2 spectral features, this project aims to produce a comprehensive evaluation of how catchment land use drives river chemistry, and whether satellite-based methods can usefully predict water quality parameters in narrow urban rivers such as the Roding.
+For this AI4EO project, I explored how machine learning applied to Sentinel-2 satellite imagery could extend those findings beyond what fieldwork alone can reveal. Earth observation is particularly powerful for characterising land use and land cover change. Since the transition from suburban to urban and industrial landscapes strongly influences ionic load and nutrient concentrations in rivers, satellite catchment data is scientifically valuable. By combining my in-situ measurements with machine learning on Sentinel-2 spectral features, this project aims to produce a comprehensive evaluation of how catchment land use drives river chemistry, and whether satellite-based methods can usefully predict water quality parameters in narrow urban rivers such as the Roding.
 
 ---
 
-## Research Questions
+## 🧐Research Questions
 
 1. Can Sentinel-2-derived catchment characteristics predict electrical conductivity and sodium concentration along the River Roding?
 2. Which spectral and land-cover features contribute most strongly to prediction performance, as revealed by SHAP analysis?
@@ -76,7 +75,7 @@ For this AI4EO project, I explored how machine learning applied to Sentinel-2 sa
 
 ---
 
-## Methodology
+## 🖍Methodology
 
 ### Study Area
 
@@ -94,7 +93,7 @@ The study focuses on the London reach of the River Roding — approximately 30 k
 | NO₃⁻ (ppm) | Colorimetric strip | 37 | Summer + Winter |
 | Na, Ca, K, Mg, S, Sr (ppm) | ICP-OES laboratory | 15 | Summer + Winter |
 
-**Estuarine split:** Sites with EC > 1800 µS/cm are flagged as Thames backwash-influenced and excluded from model training. ICP-OES data confirms saline intrusion at these sites through elevated Na, Mg, S, and Sr concentrations, consistent with the GEOL0024 report findings.
+**Estuarine split:** Sites with EC > 1800 µS/cm are flagged as Thames backwash-influenced and excluded from model training. ICP-OES data confirms saline intrusion at these sites through elevated Na, Mg, S, and Sr concentrations.
 
 ### Sentinel-2 Data
 
@@ -143,15 +142,15 @@ Random Forest Regressor with 200 estimators, adapted from the Week 5 regression 
 Applied to three targets:
 - **EC** (n=38 freshwater sites) — expected to be predictable from impervious surface features
 - **Na** (n=15 ICP-OES sites) — expected similar pattern but weaker signal
-- **pH** (n=38 freshwater sites) — expected non-result, confirming carbonate buffering
+- **pH** (n=38 freshwater sites) — expected non-result, confirming carbonate buffering as investigated during my water quality mapping project
 
 #### Supervised Regression — Ridge Regression (baseline)
-Linear baseline adapted directly from Week 5 polynomial regression. Used to assess whether the Random Forest's non-linear capability provides meaningful improvement.
+Linear baseline is used to assess whether the Random Forest's non-linear capability provides meaningful improvement.
 
-#### Unsupervised — K-Means Clustering (Week 4)
+#### Unsupervised — K-Means Clustering
 K-means applied to the summer Sentinel-2 bands (B04, B03, B02, B08) over the full Roding catchment, producing 4 land-cover clusters. Cluster labels are then sampled at each field site to test whether sites in more urbanised clusters show higher EC — an independent, label-free validation of the regression model logic.
 
-#### Explainability — SHAP (Week 9)
+#### Explainability — SHAP
 SHapley Additive exPlanations applied to the fitted Random Forest models to identify which spectral features drive EC, Na, and pH predictions. Expected to show NDBI dominates EC and Na (impervious surfaces → ionic load), while no feature dominates pH (geology controls buffering capacity regardless of land use).
 
 ### Validation Strategy
@@ -162,11 +161,11 @@ SHapley Additive exPlanations applied to the fitted Random Forest models to iden
 
 **Feature ablation:** An additional comparison runs three separate EC models — using spatial position only, EO features only, and both combined — to isolate how much the satellite data contributes beyond a simple upstream-downstream proxy.
 
-**Seasonal comparison:** EC models are fitted separately on summer-only, winter-only, and combined feature sets. If summer features outperform winter, this confirms the EC dilution signal documented in the GEOL0024 report (lower flow → more concentrated ionic load → stronger land-cover signal).
+**Seasonal comparison:** EC models are fitted separately on summer-only, winter-only, and combined feature sets. If summer features outperform winter, this confirms the EC dilution signal in water quality field investigation (lower flow → more concentrated ionic load → stronger land-cover signal).
 
 ---
 
-## Notebook Structure
+## 📝Notebook Structure
 
 The project is contained in a single Google Colab notebook with 12 cells:
 
@@ -187,7 +186,7 @@ The project is contained in a single Google Colab notebook with 12 cells:
 
 ---
 
-## Results
+## 📊Results
 
 ### Model Performance Summary (LOO-CV)
 
@@ -250,38 +249,40 @@ Overall, the project demonstrates that Sentinel-2-derived environmental features
 
 ---
 
-## Environmental Impact
+## 🌐Environmental Impact
 
 Computational carbon was tracked throughout the notebook using a custom `EnvironmentalCostTracker` class that logs energy use and CO₂ per phase. The carbon factor used is 0.5 kg CO₂/kWh (UK grid average).
 
 | Phase | Duration | Energy (Wh) | Carbon (g CO₂) |
 |-------|:--------:|:-----------:|:--------------:|
 | Data Loading & Study Area | 0.0 min | 0.0 | 0.0 |
-| Sentinel-2 Query & Download (Summer) | 0.7 min | 0.9 | 0.4 |
-| Sentinel-2 Query & Download (Winter) | 0.4 min | 0.5 | 0.3 |
-| Band Loading & RGB Preview | 1.3 min | 1.8 | 0.9 |
+| Sentinel-2 Query & Download (Summer) | 1.1 min | 1.4 | 0.7 |
+| Sentinel-2 Query & Download (Winter) | 0.6 min | 0.8 | 0.4 |
+| Band Loading & RGB Preview | 1.2 min | 1.5 | 0.8 |
 | Spectral Index Calculation | 0.3 min | 0.4 | 0.2 |
 | Feature Extraction | 0.0 min | 0.0 | 0.0 |
-| Regression Models (EC, Na, pH) | 0.3 min | 0.4 | 0.2 |
+| Regression Models (EC, Na, pH) | 0.3 min | 0.3 | 0.2 |
 | SHAP Explainability | 0.1 min | 0.1 | 0.1 |
 | Estuarine Out-of-Domain Evaluation | 0.0 min | 0.0 | 0.0 |
-| K-Means Unsupervised Clustering | 0.6 min | 0.8 | 0.4 |
-| Seasonal Comparison | 0.4 min | 0.5 | 0.3 |
-| **Total ML pipeline** | **~0.3 hours** | **46** | **23** |
+| K-Means Unsupervised Clustering | 0.5 min | 0.7 | 0.3 |
+| Seasonal Comparison | 0.3 min | 0.5 | 0.2 |
+| **Total ML pipeline** | **~0.1 hours** | **6** | **3** |
 | **Traditional fieldwork baseline** | — | — | **~25,000** |
 
-**Fieldwork baseline:** Two sampling campaigns along the Roding corridor (Loughton to Barking, ~60 km round trip × 2 seasons × 0.21 kg CO₂/km by car) = approximately 25 kg CO₂. The satellite ML pipeline produced only 23.0 g CO₂ — a 99.9% reduction compared to the estimated 25 kg CO₂ fieldwork baseline.
+**Fieldwork baseline:** Two sampling campaigns along the Roding corridor (Loughton to Barking, ~60 km round trip × 2 seasons × 0.21 kg CO₂/km by car) = approximately 25 kg CO₂. The satellite ML pipeline produced only 3.0 g CO₂ — a 99.9% reduction compared to the estimated 25 kg CO₂ fieldwork baseline.
 
 ---
 
-## Getting Started
+## 👩‍💻Getting Started
 
-All code runs in **Google Colab**. Click the badge at the top to open the notebook directly.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAE-G23/Sentinel2-Roding-Water-Quality-ML/blob/main/River_Roding_AI4EO.ipynb)
+
+All code runs in **Google Colab**. Click the badge to open the notebook directly.
 
 ### Prerequisites
 
 1. A free [Copernicus Data Space](https://dataspace.copernicus.eu) account is required for satellite data download. Register before running Cell 3.
-2. Your field data CSV (`field_measurements.csv`) must be uploaded to Google Drive at the path specified in Cell 2.
+2. Field data CSV (`field_measurements.csv`) must be uploaded to Google Drive at the path specified in Cell 2.
 
 ### Installation
 
@@ -303,37 +304,7 @@ Run cells sequentially from Cell 1. Cell 3 will prompt for Copernicus credential
 
 ---
 
-## Repository Structure
-
-```
-river-roding-water-quality-AI4EO/
-├── README.md
-├── River_Roding_AI4EO.ipynb        # Main project notebook (all 12 cells)
-│
-├── data/
-│   ├── field_measurements.csv      # 38-site water quality dataset
-│   └── README_data.md              # Data description and column definitions
-│
-└── figures/                        # All output figures (populated after notebook run)
-    ├── sampling_sites_map.png
-    ├── sentinel2_rgb_preview.png
-    ├── spectral_indices.png
-    ├── feature_correlation_heatmap.png
-    ├── predicted_vs_observed.png
-    ├── model_performance.csv
-    ├── shap_importance.png
-    ├── shap_beeswarm_ec.png
-    ├── estuarine_ood_evaluation.png
-    ├── kmeans_landcover.png
-    ├── kmeans_vs_ec.png
-    ├── seasonal_comparison.png
-    ├── seasonal_r2_comparison.png
-    └── environmental_cost.png
-```
-
----
-
-## Limitations
+## 🔒Limitations
 
 - **Small sample size:** n=38 field sites and n=15 ICP-OES samples constrains model complexity and statistical power. LOO-CV mitigates this but does not eliminate it.
 - **Point-based spectral sampling:** Sentinel-2 features are extracted at the GPS coordinate of each sampling location rather than from hydrologically delineated upstream sub-catchments or spatial buffers. This captures the immediate bankside spectral environment but does not fully resolve upstream transport pathways.
@@ -343,7 +314,7 @@ river-roding-water-quality-AI4EO/
 
 ---
 
-## References
+## 📚References
 
 Environment Agency. Lower Roding (Loughton to Thames) Water Body – Catchment Data Explorer. https://environment.data.gov.uk/catchmentplanning/WaterBody/GB106037028181
 
@@ -363,7 +334,7 @@ Walsh, C.J., et al. (2005). The urban stream syndrome: current knowledge and the
 
 ---
 
-## Contact
+## 📬Contact
 
 **James Ge**  
 Email: james.ge.23@ucl.ac.uk  
@@ -372,12 +343,18 @@ Course: GEOL0069 – AI for Earth Observation
 
 Project Link: https://github.com/JAE-G23/Sentinel2-Roding-Water-Quality-ML
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+---
+
+## 🎓Acknowledgements
+
+This project was completed as part of GEOL0069 at University College London, taught by Dr Michel Tsamados and Weibin Chen. The field data underpinning this project was collected during GEOL0024 Environmental Mapping under Dr. Alex Lipp. The notebook adapts code and concepts from the GEOL0069 weekly materials, applied to a new research context.
 
 ---
 
-## Acknowledgements
+## 📜Disclaimer
 
-This project was completed as part of GEOL0069 at University College London, taught by Dr Michel Tsamados and Weibin Chen. The field data underpinning this project was collected during GEOL0024 Environmental Mapping under Dr. Alex Lipp. The notebook adapts code and concepts from the GEOL0069 weekly materials, applied to a new research context.
+This repository contains coursework developed as part of the module GEOL0069(AI4EO) in the UCL Earth Sciences Department.
+
+The content represents my personal academic work and understanding. It is not an official course resource. Although care has been taken to ensure correctness, the material may not reflect future updates to course content.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
