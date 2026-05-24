@@ -246,18 +246,23 @@ Overall, the project demonstrates that Sentinel-2-derived environmental features
 
 Computational carbon was tracked throughout the notebook using a custom `EnvironmentalCostTracker` class that logs energy use and CO₂ per phase. The carbon factor used is 0.5 kg CO₂/kWh (UK grid average).
 
-| Phase | Carbon (g CO₂) |
-|-------|:-------------:|
-| Data acquisition (Copernicus download) | TBC |
-| Feature extraction | TBC |
-| Regression models (EC, Na, pH) | TBC |
-| SHAP analysis | TBC |
-| K-Means clustering | TBC |
-| Seasonal comparison | TBC |
-| **Total ML pipeline** | **TBC** |
-| **Traditional fieldwork baseline** | **~25,000** |
+| Phase | Duration | Energy (Wh) | Carbon (g CO₂) |
+|-------|:--------:|:-----------:|:--------------:|
+| Data Loading & Study Area | 0.0 min | 0.0 | 0.0 |
+| Sentinel-2 Query & Download (Summer) | 52.0 min | 65.2 | 32.6 |
+| Sentinel-2 Query & Download (Winter) | 0.4 min | 0.5 | 0.3 |
+| Band Loading & RGB Preview | 1.3 min | 1.8 | 0.9 |
+| Spectral Index Calculation | 0.3 min | 0.4 | 0.2 |
+| Feature Extraction | 0.0 min | 0.0 | 0.0 |
+| Regression Models (EC, Na, pH) | 0.3 min | 0.4 | 0.2 |
+| SHAP Explainability | 0.1 min | 0.1 | 0.1 |
+| Estuarine Out-of-Domain Evaluation | 0.0 min | 0.0 | 0.0 |
+| K-Means Unsupervised Clustering | 0.6 min | 0.8 | 0.4 |
+| Seasonal Comparison | 0.4 min | 0.5 | 0.3 |
+| **Total ML pipeline** | **55.4 min** | **69.7** | **34.9** |
+| **Traditional fieldwork baseline** | — | — | **~25,000** |
 
-**Fieldwork baseline:** Two sampling campaigns along the Roding corridor (Loughton to Barking, ~60 km round trip × 2 seasons × 0.21 kg CO₂/km by car) = approximately 25 kg CO₂. The satellite ML pipeline is expected to produce a fraction of this, while delivering spatially continuous information rather than point measurements.
+**Fieldwork baseline:** Two sampling campaigns along the Roding corridor (Loughton to Barking, ~60 km round trip × 2 seasons × 0.21 kg CO₂/km by car) = approximately 25 kg CO₂. The satellite ML pipeline produced only 34.9 g CO₂ — a 99.9% reduction compared to the estimated 25 kg CO₂ fieldwork baseline.
 
 ---
 
