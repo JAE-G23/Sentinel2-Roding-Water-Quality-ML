@@ -354,10 +354,11 @@ Run cells sequentially from Cell 1. Cell 3 will prompt for Copernicus credential
 
 ## 📚References
 
-Remote London. (2023). *River Roding at Ilford*.
+Remote London. (2023). *River Roding at Ilford*.  
 https://www.remotelondon.com/wp-content/uploads/2023/06/roding-ilford-scaled.jpg
 
-Environment Agency. Lower Roding (Loughton to Thames) Water Body – Catchment Data Explorer. https://environment.data.gov.uk/catchmentplanning/WaterBody/GB106037028181
+Environment Agency. Lower Roding (Loughton to Thames) Water Body – Catchment Data Explorer.  
+https://environment.data.gov.uk/catchmentplanning/WaterBody/GB106037028181
 
 Kaushal, S.S., et al. (2018). Freshwater salinization syndrome on a continental scale. *PNAS*, 115(4), E574–E583. https://doi.org/10.1073/pnas.1711234115
 
