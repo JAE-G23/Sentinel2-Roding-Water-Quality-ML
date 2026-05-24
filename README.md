@@ -231,21 +231,37 @@ The freshwater-trained Random Forest model failed completely when applied to est
 
 Overall, the project demonstrates that Sentinel-2-derived environmental features can partially explain urban freshwater hydrochemistry, but also highlights important physical limitations associated with narrow river geometry, hydrological mixing, and estuarine tidal influence.
 
-### Key Figures Produced
+## Key Figures
 
-- `sampling_sites_map.png` — Study area map with freshwater/estuarine site distinction
-- `sentinel2_rgb_preview.png` — Summer and winter RGB composites over the Roding catchment
-- `spectral_indices.png` — NDVI, NDWI, NDBI maps for both seasons
-- `feature_correlation_heatmap.png` — Pearson correlations between spectral features and water quality targets
-- `predicted_vs_observed.png` — LOO-CV scatter plots for EC, Na, and pH
-- `model_performance.csv` — Full performance table
-- `shap_importance.png` — SHAP bar plots for EC, Na, pH
-- `shap_beeswarm_ec.png` — SHAP beeswarm showing direction of feature effects on EC
-- `estuarine_ood_evaluation.png` — Freshwater vs estuarine prediction comparison
-- `kmeans_landcover.png` — K-means land cover classification map
-- `kmeans_vs_ec.png` — EC distribution by K-means cluster
-- `seasonal_comparison.png` — Summer vs winter model performance
-- `environmental_cost.png` — ML pipeline vs fieldwork carbon comparison
+### Study Area — Sampling Sites
+<p align="center">
+<img src="figures/sampling_sites_map.png" width="600"/>
+</p>
+
+### Sentinel-2 Spectral Indices (Summer & Winter)
+<p align="center">
+<img src="figures/spectral_indices.png" width="800"/>
+</p>
+
+### Model Results — Predicted vs Observed (LOO-CV)
+<p align="center">
+<img src="figures/predicted_vs_observed.png" width="800"/>
+</p>
+
+### SHAP Feature Importance — Electrical Conductivity
+<p align="center">
+<img src="figures/shap_beeswarm_ec.png" width="600"/>
+</p>
+
+### Estuarine Out-of-Domain Evaluation
+<p align="center">
+<img src="figures/estuarine_ood_evaluation.png" width="700"/>
+</p>
+
+### Unsupervised Land Cover Classification (K-Means)
+<p align="center">
+<img src="figures/kmeans_landcover.png" width="700"/>
+</p>
 
 ---
 
@@ -270,6 +286,8 @@ Computational carbon was tracked throughout the notebook using a custom `Environ
 | **Traditional fieldwork baseline** | — | — | **~25,000** |
 
 **Fieldwork baseline:** Two sampling campaigns along the Roding corridor (Loughton to Barking, ~60 km round trip × 2 seasons × 0.21 kg CO₂/km by car) = approximately 25 kg CO₂. The satellite ML pipeline produced only 3.0 g CO₂ — a 99.9% reduction compared to the estimated 25 kg CO₂ fieldwork baseline.
+
+![Environmental Cost](figures/environmental_cost.png)
 
 ---
 
