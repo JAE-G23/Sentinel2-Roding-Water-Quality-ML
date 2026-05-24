@@ -78,6 +78,11 @@ For this AI4EO project, I explored how machine learning applied to Sentinel-2 sa
 
 ## 🖍Methodology
 
+<p align="center">
+<img src="figure_for_presentation/Workflow.png" width="750"/>
+</p>
+<p align="center"><em> Figure 2. Workflow of the AI4EO River Roding Machine Learning Pipeline.</em></p>
+
 ### Study Area
 
 The study focuses on the London reach of the River Roding — approximately 30 km from Loughton (Essex) to Barking Creek (East London) where it joins the Thames. This corridor passes through a strong urban gradient: semi-natural woodland at Loughton, suburban residential areas in Redbridge, and heavily urbanised and industrial landscapes near Barking. This gradient is the core scientific signal this project tries to capture from space.
@@ -241,31 +246,31 @@ Overall, the project demonstrates that Sentinel-2-derived environmental features
 <p align="center">
 <img src="figures/sampling_sites_map.png" width="600"/>
 </p>
-<p align="center"><em>Figure 2. River Roding sampling sites across the London reach. Blue circles indicate freshwater sites used for model training (n=31); red triangles indicate estuarine sites excluded from training and reserved as an out-of-domain evaluation set (n=7).</em></p>
+<p align="center"><em>Figure 3. River Roding sampling sites across the London reach. Blue circles indicate freshwater sites used for model training (n=31); red triangles indicate estuarine sites excluded from training and reserved as an out-of-domain evaluation set (n=7).</em></p>
 
 ### Sentinel-2 Spectral Indices (Summer & Winter)
 <p align="center">
 <img src="figures/spectral_indices.png" width="800"/>
 </p>
-<p align="center"><em>Figure 3. Spectral indices computed from Sentinel-2 Level-2A imagery for summer (October 2025, top row) and winter (January 2026, bottom row) over the Roding catchment. NDVI (left) shows the north-to-south transition from vegetated suburban areas to dense urban surfaces. NDWI (centre) highlights the Thames and its tributaries. NDBI (right) reveals the concentration of impervious built-up surfaces in inner East London.</em></p>
+<p align="center"><em>Figure 4. Spectral indices computed from Sentinel-2 Level-2A imagery for summer (October 2025, top row) and winter (January 2026, bottom row) over the Roding catchment. NDVI (left) shows the north-to-south transition from vegetated suburban areas to dense urban surfaces. NDWI (centre) highlights the Thames and its tributaries. NDBI (right) reveals the concentration of impervious built-up surfaces in inner East London.</em></p>
 
 ### Model Results — Predicted vs Observed (LOO-CV)
 <p align="center">
 <img src="figures/predicted_vs_observed.png" width="800"/>
 </p>
-<p align="center"><em>Figure 4. LOO-CV results for Random Forest regression across three water quality targets. EC (left) shows modest predictive skill driven by the urban-to-rural gradient. Na (centre) performs poorly, reflecting the small ICP-OES sample size (n=11) and stronger hydrological mixing controls. pH (right) is effectively unpredictable from EO features, confirming that carbonate buffering and geological controls dominate over land-cover effects, consistent with the fieldwork findings.</em></p>
+<p align="center"><em>Figure 5. LOO-CV results for Random Forest regression across three water quality targets. EC (left) shows modest predictive skill driven by the urban-to-rural gradient. Na (centre) performs poorly, reflecting the small ICP-OES sample size (n=11) and stronger hydrological mixing controls. pH (right) is effectively unpredictable from EO features, confirming that carbonate buffering and geological controls dominate over land-cover effects, consistent with the fieldwork findings.</em></p>
 
 ### SHAP Feature Importance — Electrical Conductivity
 <p align="center">
 <img src="figures/shap_beeswarm_ec.png" width="700"/>
 </p>
-<p align="center"><em>Figure 5. SHAP beeswarm plot for EC prediction. Each dot represents one sampling site. Red dots indicate high feature values, blue dots indicate low feature values. Distance rank dominates. Sites further downstream (high rank, red) receive large positive SHAP values, confirming the urban gradient as the primary EC driver. Winter NDBI shows a secondary positive effect, consistent with impervious surface runoff contributing to ionic load. The spectral indices contribute modestly relative to position, explaining the weak EO-only model performance.</em></p>
+<p align="center"><em>Figure 6. SHAP beeswarm plot for EC prediction. Each dot represents one sampling site. Red dots indicate high feature values, blue dots indicate low feature values. Distance rank dominates. Sites further downstream (high rank, red) receive large positive SHAP values, confirming the urban gradient as the primary EC driver. Winter NDBI shows a secondary positive effect, consistent with impervious surface runoff contributing to ionic load. The spectral indices contribute modestly relative to position, explaining the weak EO-only model performance.</em></p>
 
 ### Estuarine Out-of-Domain Evaluation
 <p align="center">
 <img src="figures/estuarine_ood_evaluation.png" width="800"/>
 </p>
-<p align="center"><em>Figure 6. Domain generalisation test: the freshwater-trained Random Forest EC model applied to estuarine sites near Barking Creek. Left: in-domain freshwater performance showing modest but positive predictive skill. Right: out-of-domain estuarine performance showing complete model failure. This failure is scientifically expected: Thames tidal backwash drives saline intrusion that is entirely invisible to Sentinel-2 catchment land-cover features, confirming tidal mixing as a distinct hydrological control.</em></p>
+<p align="center"><em>Figure 7. Domain generalisation test: the freshwater-trained Random Forest EC model applied to estuarine sites near Barking Creek. Left: in-domain freshwater performance showing modest but positive predictive skill. Right: out-of-domain estuarine performance showing complete model failure. This failure is scientifically expected: Thames tidal backwash drives saline intrusion that is entirely invisible to Sentinel-2 catchment land-cover features, confirming tidal mixing as a distinct hydrological control.</em></p>
 
 ### Unsupervised Land Cover Classification (K-Means)
 <p align="center">
