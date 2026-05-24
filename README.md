@@ -3,6 +3,14 @@
 <h1 align="center">Predicting Urban River Water Quality from Sentinel-2 Catchment Characteristics</h1>
 <h3 align="center">A Machine Learning Approach Applied to the River Roding, East London</h3>
 
+<p align="center">
+  <img src="figure_for_presentation/roding-ilford-scaled.jpeg" width="90%">
+</p>
+
+<p align="center">
+  <em>Figure 1. The River Roding at Ilford, East London — representative of the urban river corridor investigated in this project.
+</p>
+
 **Course:** GEOL0069 – Artificial Intelligence for Earth Observation  
 **Author:** James Ge  
 **Institution:** University College London
