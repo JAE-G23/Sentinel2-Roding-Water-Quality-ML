@@ -1,0 +1,6 @@
+Target,Model,n,R^2,RMSE,MAE
+EC,Ridge Regression,31,0.255,128.52,107.719
+EC,Random Forest,31,0.17,135.641,111.863
+Na,Ridge Regression,11,0.009,14.172,11.513
+Na,Random Forest,11,-0.048,14.576,12.03
+pH,Random Forest,31,-0.116,0.251,0.189
