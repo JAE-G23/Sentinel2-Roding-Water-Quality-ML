@@ -389,6 +389,9 @@ Run cells sequentially from Cell 1. Cell 3 will prompt for Copernicus credential
 
 ## 📚References
 
+
+*GEOL0069 AI for Earth Observation Course Materials* — Dr Michel Tsamados and Weibin Chen, UCL Earth Sciences.
+
 Remote London. (2023). *River Roding at Ilford*.  
 https://www.remotelondon.com/wp-content/uploads/2023/06/roding-ilford-scaled.jpg
 
@@ -407,7 +410,6 @@ Thames21 (2024). Citizen Science Water Quality Monitoring Programme: Technical R
 
 Walsh, C.J., et al. (2005). The urban stream syndrome: current knowledge and the search for a cure. *Journal of the North American Benthological Society*, 24(3), 706–723.
 
-*GEOL0069 AI for Earth Observation Course Materials* — Dr Michel Tsamados and Weibin Chen, UCL Earth Sciences.
 
 ---
 
