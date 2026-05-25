@@ -154,11 +154,6 @@ The final feature set used in regression (`FEATURE_COLS`) comprises 7 physically
 #### Supervised Regression — Random Forest (main model)
 Random Forest Regressor with 200 estimators. Chosen for its ability to handle non-linear relationships between spectral features and water chemistry, and for providing feature importance scores used in SHAP analysis.
 
-Applied to three targets:
-- **EC** (n=38 freshwater sites) — expected to be predictable from impervious surface features
-- **Na** (n=15 ICP-OES sites) — expected similar pattern but weaker signal
-- **pH** (n=38 freshwater sites) — expected non-result, confirming carbonate buffering as investigated during my water quality mapping project
-
 #### Supervised Regression — Ridge Regression (baseline)
 Linear baseline is used to assess whether the Random Forest's non-linear capability provides meaningful improvement.
 
