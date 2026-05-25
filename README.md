@@ -181,7 +181,9 @@ SHapley Additive exPlanations applied to the fitted Random Forest models to iden
 
 ## 📝Notebook Structure
 
-The project is contained in a single Google Colab notebook with 12 cells:
+The project is contained in a single Google Colab notebook with 12 cells: 
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAE-G23/Sentinel2-Roding-Water-Quality-ML/blob/main/River_Roding_AI4EO.ipynb)
 
 | Cell | Description | Adapted from |
 |------|-------------|------------------|
@@ -197,8 +199,6 @@ The project is contained in a single Google Colab notebook with 12 cells:
 | 10 | K-Means unsupervised land cover classification | **Week 4** |
 | 11 | Seasonal comparison (summer vs winter features) | **Week 5** |
 | 12 | Environmental cost assessment | — |
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAE-G23/Sentinel2-Roding-Water-Quality-ML/blob/main/River_Roding_AI4EO.ipynb)
 
 ---
 
