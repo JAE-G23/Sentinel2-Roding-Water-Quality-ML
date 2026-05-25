@@ -198,6 +198,8 @@ The project is contained in a single Google Colab notebook with 12 cells:
 | 11 | Seasonal comparison (summer vs winter features) | **Week 5** |
 | 12 | Environmental cost assessment | — |
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAE-G23/Sentinel2-Roding-Water-Quality-ML/blob/main/River_Roding_AI4EO.ipynb)
+
 ---
 
 ## 📅Results
