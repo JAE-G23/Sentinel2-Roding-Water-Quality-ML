@@ -1,15 +1,16 @@
 <a name="readme-top"></a>
 
-<h1 align="center">Predicting Urban River Water Quality from Sentinel-2 Catchment Characteristics</h1>
-<h3 align="center">A Machine Learning Approach Applied to the River Roding, East London</h3>
+<div align="center">
 
-<p align="center">
-  <img src="figure_for_presentation/roding-ilford-scaled.jpeg" width="800">
-</p>
+# Predicting Urban River Water Quality from Sentinel-2 Catchment Characteristics
 
-<p align="center">
-  <em>Figure 1. The River Roding at Ilford, East London — representative of the urban river corridor investigated in this project.</em>
-</p>
+### A Machine Learning Approach Applied to the River Roding, East London
+
+<img src="figure_for_presentation/roding-ilford-scaled.jpeg" width="800" alt="River Roding at Ilford, East London">
+
+*Figure 1. The River Roding at Ilford, East London — the urban river corridor investigated in this project.*
+
+</div>
 
 **Course:** GEOL0069 – Artificial Intelligence for Earth Observation  
 **Author:** James Ge  
@@ -19,33 +20,30 @@
 ---
 
 <details>
-  <summary><strong>Table of Contents</strong></summary>
-  <ol>
-    <li><a href="#project-overview">Project Overview</a></li>
-    <li><a href="#-project-video">Project Video</a></li>
-    <li><a href="#background-and-motivation">Background and Motivation</a></li>
-    <li><a href="#research-questions">Research Questions</a></li>
-    <li><a href="#methodology">Methodology</a>
-      <ul>
-        <li><a href="#study-area">Study Area</a></li>
-        <li><a href="#field-data">Field Data</a></li>
-        <li><a href="#sentinel-2-data">Sentinel-2 Data</a></li>
-        <li><a href="#spectral-indices">Spectral Indices</a></li>
-        <li><a href="#machine-learning-approaches">Machine Learning Approaches</a></li>
-        <li><a href="#validation-strategy">Validation Strategy</a></li>
-      </ul>
-    </li>
-    <li><a href="#notebook-structure">Notebook Structure</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#environmental-impact">Environmental Impact</a></li>
-    <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#repository-structure">Repository Structure</a></li>
-    <li><a href="#limitations">Limitations</a></li>
-    <li><a href="#references">References</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-    <li><a href="#disclaimer">Disclaimer</a></li>
-  </ol>
+<summary><strong>Table of Contents</strong></summary>
+
+1. [Project Overview](#project-overview)
+2. [Project Video](#project-video)
+3. [Background and Motivation](#background-and-motivation)
+4. [Research Questions](#research-questions)
+5. [Methodology](#methodology)
+   - [Study Area](#study-area)
+   - [Field Data](#field-data)
+   - [Sentinel-2 Data](#sentinel-2-data)
+   - [Spectral Indices](#spectral-indices)
+   - [Machine Learning Approaches](#machine-learning-approaches)
+   - [Validation Strategy](#validation-strategy)
+6. [Notebook Structure](#notebook-structure)
+7. [Results](#results)
+8. [Environmental Impact](#environmental-impact)
+9. [Getting Started](#getting-started)
+10. [Repository Structure](#repository-structure)
+11. [Limitations](#limitations)
+12. [References](#references)
+13. [Contact](#contact)
+14. [Acknowledgements](#acknowledgements)
+15. [Disclaimer](#disclaimer)
+
 </details>
 
 ---
@@ -87,10 +85,13 @@ For this AI4EO project, I explored how machine learning applied to Sentinel-2 sa
 
 ## 🖍Methodology
 
-<p align="center">
-<img src="figure_for_presentation/Workflow.png" width="750"/>
-</p>
-<p align="center"><em> Figure 2. Workflow of the AI4EO River Roding Machine Learning Pipeline.</em></p>
+<div align="center">
+
+<img src="figure_for_presentation/Workflow.png" width="750" alt="Workflow of the AI4EO River Roding machine learning pipeline">
+
+*Figure 2. Workflow of the AI4EO River Roding machine learning pipeline.*
+
+</div>
 
 ### Study Area
 
@@ -247,40 +248,64 @@ Overall, the project demonstrates that Sentinel-2-derived environmental features
 ## 📊Key Figures
 
 ### Study Area — Sampling Sites
-<p align="center">
-<img src="figures/sampling_sites_map.png" width="600"/>
-</p>
-<p align="center"><em>Figure 3. River Roding sampling sites across the London reach. Blue circles indicate freshwater sites used for model training; red triangles indicate estuarine sites excluded from training and reserved as an out-of-domain evaluation set.</em></p>
 
-### Sentinel-2 Spectral Indices (Summer & Winter)
-<p align="center">
-<img src="figures/spectral_indices.png" width="800"/>
-</p>
-<p align="center"><em>Figure 4. Spectral indices computed from Sentinel-2 Level-2A imagery for summer (October 2025, top row) and winter (January 2026, bottom row) over the Roding catchment. NDVI (left) shows the north-to-south transition from vegetated suburban areas to dense urban surfaces. NDWI (centre) highlights the Thames and its tributaries. NDBI (right) reveals the concentration of impervious built-up surfaces in inner East London.</em></p>
+<div align="center">
 
-### Model Results — Predicted vs Observed (LOO-CV)
-<p align="center">
-<img src="figures/predicted_vs_observed.png" width="800"/>
-</p>
-<p align="center"><em>Figure 5. LOO-CV results for Random Forest regression across three water quality targets. EC (left) shows modest predictive skill driven by the urban-to-rural gradient. Na (centre) performs poorly, reflecting the small ICP-OES sample size (n=11) and stronger hydrological mixing controls. pH (right) is effectively unpredictable from EO features, confirming that carbonate buffering and geological controls dominate over land-cover effects, consistent with the fieldwork findings.</em></p>
+<img src="figures/sampling_sites_map.png" width="600" alt="River Roding sampling sites across the London reach">
+
+*Figure 3. River Roding sampling sites across the London reach. Blue circles indicate freshwater training sites; red triangles indicate estuarine sites reserved for out-of-domain evaluation.*
+
+</div>
+
+### Sentinel-2 Spectral Indices — Summer and Winter
+
+<div align="center">
+
+<img src="figures/spectral_indices.png" width="800" alt="Sentinel-2 spectral indices for summer and winter over the River Roding catchment">
+
+*Figure 4. Sentinel-2 spectral indices for summer and winter over the Roding catchment. NDVI shows the north–south vegetation gradient; NDWI highlights the Thames and tributaries; NDBI captures the concentration of impervious urban surfaces in inner East London.*
+
+</div>
+
+### Model Results — Predicted vs Observed
+
+<div align="center">
+
+<img src="figures/predicted_vs_observed.png" width="800" alt="Leave-one-out cross-validation results for predicted versus observed water quality variables">
+
+*Figure 5. Leave-one-out cross-validation results for Random Forest regression across EC, Na and pH. EC shows modest predictive skill linked to the urban–rural gradient. Na performs poorly because of the small ICP-OES sample size and stronger hydrological mixing controls. pH is effectively unpredictable from EO features, consistent with carbonate buffering and geological control.*
+
+</div>
 
 ### SHAP Feature Importance — Electrical Conductivity
-<p align="center">
-<img src="figures/shap_beeswarm_ec.png" width="700"/>
-</p>
-<p align="center"><em>Figure 6. SHAP beeswarm plot for EC prediction. Each dot represents one sampling site. Red dots indicate high feature values, blue dots indicate low feature values. Distance rank dominates. Sites further downstream (high rank, red) receive large positive SHAP values, confirming the urban gradient as the primary EC driver. Winter NDBI shows a secondary positive effect, consistent with impervious surface runoff contributing to ionic load. The spectral indices contribute modestly relative to position, explaining the weak EO-only model performance.</em></p>
+
+<div align="center">
+
+<img src="figures/shap_beeswarm_ec.png" width="700" alt="SHAP beeswarm plot for electrical conductivity prediction">
+
+*Figure 6. SHAP beeswarm plot for EC prediction. Distance rank is the dominant predictor: downstream sites produce large positive SHAP values, confirming the urban gradient as the main EC control. Winter NDBI has a secondary positive effect, consistent with impervious-surface runoff contributing to ionic load. Spectral indices contribute only modestly relative to site position.*
+
+</div>
 
 ### Estuarine Out-of-Domain Evaluation
-<p align="center">
-<img src="figures/estuarine_ood_evaluation.png" width="800"/>
-</p>
-<p align="center"><em>Figure 7. Domain generalisation test: the freshwater-trained Random Forest EC model applied to estuarine sites near Barking Creek. Left: in-domain freshwater performance showing modest but positive predictive skill. Right: out-of-domain estuarine performance showing complete model failure. This failure is scientifically expected: Thames tidal backwash drives saline intrusion that is entirely invisible to Sentinel-2 catchment land-cover features, confirming tidal mixing as a distinct hydrological control.</em></p>
 
-### Unsupervised Land Cover Classification (K-Means)
-<p align="center">
-<img src="figures/kmeans_landcover.png" width="800"/>
-</p>
-<p align="center"><em>Figure 7. K-Means unsupervised clustering (4 clusters) applied to Sentinel-2 summer bands (B04, B03, B02, B08) over the Roding catchment, shown alongside the RGB reference image. The algorithm separates the scene into distinct land cover types without any labelled training data: red/brown tones in the north correspond to suburban and vegetated area, while green dominates the densely urbanised and impervious surfaces of inner East London in the south. The Thames is visible as a dark green winding feature through the lower portion of the scene. The spatial pattern aligns visually with the RGB composite, confirming the clusters capture meaningful land cover variation rather than noise.</em></p>
+<div align="center">
+
+<img src="figures/estuarine_ood_evaluation.png" width="800" alt="Out-of-domain evaluation of freshwater-trained EC model on estuarine River Roding sites">
+
+*Figure 7. Domain generalisation test for the freshwater-trained Random Forest EC model. The model shows modest in-domain freshwater performance but fails at estuarine sites near Barking Creek. This is scientifically expected because Thames tidal backwash introduces saline mixing, a hydrological process not captured by Sentinel-2 catchment land-cover features.*
+
+</div>
+
+### Unsupervised Land Cover Classification — K-Means
+
+<div align="center">
+
+<img src="figures/kmeans_landcover.png" width="800" alt="K-Means unsupervised land cover classification using Sentinel-2 imagery over the Roding catchment">
+
+*Figure 8. K-Means unsupervised clustering with four clusters applied to Sentinel-2 summer bands over the Roding catchment. The classification separates broad land-cover types without labelled training data. The resulting spatial pattern broadly matches the RGB composite, indicating that the clusters capture meaningful land-cover variation rather than random noise.*
+
+</div>
 
 ---
 
@@ -306,9 +331,13 @@ Computational carbon was tracked throughout the notebook using a custom `Environ
 
 **Fieldwork baseline:** Two sampling campaigns along the Roding corridor (Loughton to Barking, ~60 km round trip × 2 seasons × 0.21 kg CO₂/km by car) = approximately 25 kg CO₂. The satellite ML pipeline produced only 3.0 g CO₂ — a 99.9% reduction compared to the estimated 25 kg CO₂ fieldwork baseline.
 
-![Environmental Cost](figures/environmental_cost.png)
-</p>
-<p align="center"><em>Figure 8. Computational carbon footprint of the AI4EO River Roding project. Left: carbon emissions per pipeline phase, showing Band Loading and data download as the dominant costs. Right: log-scale comparison between the total ML pipeline footprint (3 g CO₂) and the estimated traditional fieldwork baseline (~25,000 g CO₂ from vehicle travel across two sampling campaigns). The satellite ML approach achieves a carbon saving of >99%.</em></p>
+<div align="center">
+
+<img src="figures/environmental_cost.png" width="800" alt="Computational carbon footprint of the AI4EO River Roding project">
+
+*Figure 9. Computational carbon footprint of the AI4EO River Roding project. Band loading and data download dominate the pipeline emissions. The total ML workflow footprint is approximately 3 g CO₂, compared with an estimated fieldwork travel baseline of about 25,000 g CO₂ across two sampling campaigns, giving a carbon saving greater than 99%.*
+
+</div>
 
 ---
 
