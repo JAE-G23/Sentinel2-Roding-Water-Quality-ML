@@ -22,6 +22,7 @@
   <summary><strong>Table of Contents</strong></summary>
   <ol>
     <li><a href="#project-overview">Project Overview</a></li>
+    <li><a href="#-project-video">Project Video</a></li>
     <li><a href="#background-and-motivation">Background and Motivation</a></li>
     <li><a href="#research-questions">Research Questions</a></li>
     <li><a href="#methodology">Methodology</a>
@@ -56,6 +57,14 @@ This project investigates whether Sentinel-2 Earth Observation data and machine 
 The River Roding is too narrow (~10–30m) to be directly imaged at Sentinel-2's 10m resolution. Rather than attempting to image the channel itself, this project extracts spectral and land-cover characteristics from the **surrounding catchment environment** of each sampling location and uses these within a machine learning regression framework to predict water quality parameters — principally EC and sodium concentration (Na).
 
 A key methodological decision separates sites strongly influenced by Thames estuarine backwash (EC > 1800 µS/cm) from the freshwater training set, using them instead as an **out-of-domain evaluation dataset**. This mirrors the cross-ecosystem generalisation approach used in remote sensing ML literature, and is physically motivated by the ICP-OES evidence for saline intrusion at downstream sites.
+
+---
+
+## 🎥 Project Video
+
+[![AI4EO River Roding Project Walkthrough](https://img.youtube.com/vi/iuHxJPWIivI/maxresdefault.jpg)](https://www.youtube.com/watch?v=iuHxJPWIivI)
+
+*Video 1. Project walkthrough explaining the Sentinel-2 processing workflow, spectral feature extraction, machine learning regression, SHAP explainability, estuarine out-of-domain evaluation, and environmental cost assessment.*
 
 ---
 
