@@ -428,6 +428,8 @@ Project Link: https://github.com/JAE-G23/Sentinel2-Roding-Water-Quality-ML
 
 This project was completed as part of GEOL0069 at University College London, taught by Dr Michel Tsamados and Weibin Chen. The field data underpinning this project was collected during GEOL0024 Environmental Mapping under Dr. Alex Lipp. The notebook adapts code and concepts from the GEOL0069 weekly materials, applied to a new research context.
 
+AI tools were used to assist in the visual design and generation of Figure 2, based on prompts and detailed direction provided by the author.
+
 ---
 
 ## 📜Disclaimer
