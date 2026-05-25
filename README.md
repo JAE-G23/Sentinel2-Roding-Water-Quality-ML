@@ -376,6 +376,8 @@ Run cells sequentially from Cell 1. Cell 3 will prompt for Copernicus credential
 - **Two scenes only:** Imagery for one summer and one winter scene is used. A multi-year or multi-date composite would produce more robust spectral features.
 - **Estuarine sites:** The Thames tidal backwash signal cannot be captured by any land-cover satellite feature. This is clearly demonstrated in Cell 9 and is a finding rather than a flaw.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ---
 
 ## 📚References
