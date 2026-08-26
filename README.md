@@ -410,7 +410,7 @@ Walsh, C.J., et al. (2005). The urban stream syndrome: current knowledge and the
 ## 📬Contact
 
 **James Ge**  
-Email: james.ge.23@ucl.ac.uk / james.ge26@imperial.ac.uk
+Email: james.ge.23@ucl.ac.uk / james.ge26@imperial.ac.uk   
 Institution: University College London  
 Course: GEOL0069 – AI for Earth Observation
 
